@@ -1,0 +1,28 @@
+package oop.exercises.Arrays;
+
+import oop.exercises.Exercise;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrayExercise7 implements Exercise {
+    @Override
+    public void execute() {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+        Integer[] nums = Arrays.stream(s.split(" ")).map(Integer::parseInt).toArray(Integer[]::new);
+
+        for (int i = 0; i < nums.length / 2; i++) {
+            int idx = nums.length - 1 - i;
+
+            int c = nums[idx];
+            nums[idx] = nums[i];
+            nums[i] = c;
+        }
+
+        for (int num: nums) {
+            System.out.print(num + " ");
+        }
+    }
+}
