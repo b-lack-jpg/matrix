@@ -1,0 +1,10 @@
+package oop.exercises.Arrays;
+
+import oop.exercises.Exercise;
+
+public class ArrayExercise26 implements Exercise {
+    @Override
+    public void execute() {
+
+    }
+}
